@@ -1,0 +1,23 @@
+\documentclass[11pt]{article}
+%Gummi|065|=)
+\title{\textbf{Schema of Tables Used}}
+\author{}
+\date{}
+\begin{document}
+
+\maketitle
+
+\section{The Blog Table}
+
+The 'Blog' table is defined thus in db.py: \newline \newline db.define\_table('blog',Field('f\_title','string',label=T('Title'),requires=IS\_NOT\_EMPTY()),Field('f\_entry','text',label=T('Entry'),requires=IS\_NOT\_EMPTY()), Field('f\_image','upload',label=T('Image')),auth.signature)
+\newline \newline
+The Blog table consists of three input fields - Title(of type 'string'), Entry(of type 'text', Image(of type 'Upload') - along with auth.signature fields. 
+
+\section{The Events Table}
+The 'Events' table is defined thus in db.py: \newline \newline db.define\_table('e\_event',Field('e\_start','date',label=T('Start Date'),requires=IS\_NOT\_EMPTY()),Field('e\_stime','time',label=T('Start Time')), Field('e\_end','date',label=T('End Date'),requires=IS\_NOT\_EMPTY()),Field('e\_etime','time',label=T('End Time')), Field('e\_name','string',label=T('Event Name'),requires=IS\_NOT\_EMPTY()), Field('e\_desc','text',label=T('Description')),auth.signature)
+\newline \newline
+The e\_event table consists of six fields - Start Date(of type 'date'), End Date(of type 'date'), Start Time( of type 'time'), End Time( of type 'time'), Event Name(of type 'string'), Description (of type 'text') - along with auth.signature fields. 
+
+
+
+\end{document}
